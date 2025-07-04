@@ -1,3 +1,10 @@
-# Q3_25_Builder_Abduovv
+# Turbin3 Q3 – Proof of Work
 
-This repository contains my Q3 2025 cohort projects and prerequisites for the Turbin3 organization.
+This repo documents my journey and contributions during the **Turbin3 Q3 Cohort**.  
+I'll be building Solana-based projects using tools like Anchor, TypeScript, and more.
+
+---
+
+## 📁 Projects
+
+
