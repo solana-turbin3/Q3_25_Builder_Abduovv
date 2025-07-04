@@ -1,4 +1,4 @@
-# Turbin3 Q3 – Proof of Work
+# Turbin3 Q3 – PoW
 
 <p align="center">
   <img src="./banner.png" alt="Banner" width="800"/>
