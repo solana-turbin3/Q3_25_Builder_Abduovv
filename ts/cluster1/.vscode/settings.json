@@ -1,0 +1,31 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    },
+    "search.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    },
+    "rust-analyzer.diagnostics.enable": true,
+    "rust-analyzer.hover.actions.enable": true,
+    "rust-analyzer.completion.autoimport.enable": true,
+    "rust-analyzer.signatureInfo.enabled": true,
+    "rust-analyzer.inlayHints.enable": true,
+
+    //  قلل الحاجات الثقيلة
+    "rust-analyzer.procMacro.enable": false,
+    "rust-analyzer.cargo.runBuildScripts": false,
+    "rust-analyzer.files.watcher": "client",
+
+    //  تحسين الأداء مع مشاريع كبيرة
+    "rust-analyzer.workspace.symbol.search.limit": 500,
+    "rust-analyzer.cargo.features": []
+}
+
