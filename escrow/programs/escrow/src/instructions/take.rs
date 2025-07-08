@@ -75,9 +75,9 @@ impl <'info> Take<'info> {
     pub fn deposit(&mut self, deposit: u64) -> Result<()> {
 
         let transfer_accounts = TransferChecked {
-            from: self.taker_ata_a.to_account_info(),
-            mint: self.mint_a.to_account_info(),
-            to: self.vault.to_account_info(),
+            from: self.taker_ata_b.to_account_info(),
+            mint: self.mint_b.to_account_info(),
+            to: self.maker_ata_b.to_account_info(),
             authority: self.taker.to_account_info(),
         };
 
