@@ -1,4 +1,4 @@
-import wallet from "./wallet/turbin3-wallet.json"
+import wallet from "../Turbin3-wallet.json"
 import { createUmi } from "@metaplex-foundation/umi-bundle-defaults"
 import { 
     createMetadataAccountV3, 
@@ -10,7 +10,7 @@ import { createSignerFromKeypair, signerIdentity, publicKey } from "@metaplex-fo
 import { bs58 } from "@coral-xyz/anchor/dist/cjs/utils/bytes";
 
 // Define our Mint address
-const mint = publicKey("E64Dj1EDup9DEdYot26VXCMXEF4eCYvxFM71MGyFgVDy");
+const mint = publicKey("4JFrxZF8kN1CS5NVKG4zPbKEKs8v5PkMfARM5Fj1wpDA") // address from the spl_init.ts file
 
 // Create a UMI connection
 const umi = createUmi('https://api.devnet.solana.com');
@@ -22,36 +22,36 @@ umi.use(signerIdentity(createSignerFromKeypair(umi, keypair)));
     try {
         // Start here
         let accounts: CreateMetadataAccountV3InstructionAccounts = {
-             mint,
-             mintAuthority: signer,
-         }
+            mint,
+            mintAuthority: signer,
+        }
 
-         let data: DataV2Args = {
-             name: "Elgamed",
-             symbol: "ELGM",
-             uri: "https://example.com",
-             sellerFeeBasisPoints: 0,
-             creators: null,
-             collection: null,
-             uses: null
-         }
+        let data: DataV2Args = {
+            name: "LuciferV2",
+            symbol: "LUC",
+            uri: "https://wallpapers.com/images/hd/fantasy-dark-lucifer-3d-r3ra451dyussbyzr.jpg",
+            sellerFeeBasisPoints: 5,
+            creators: null,
+            collection: null,
+            uses: null,
+        }
 
-         let args: CreateMetadataAccountV3InstructionArgs = {
-             data,
-             isMutable: true,
-             collectionDetails: null,
-         }
+        let args: CreateMetadataAccountV3InstructionArgs = {
+            data,
+            isMutable: true,
+            collectionDetails: null,
+        }
 
-         let tx = createMetadataAccountV3(
-             umi,
-             {
-                 ...accounts,
-                 ...args
-             }
-         )
+        let tx = createMetadataAccountV3(
+            umi,
+            {
+                ...accounts,
+                ...args
+            }
+        )
 
-         let result = await tx.sendAndConfirm(umi);
-         console.log(bs58.encode(result.signature));
+        let result = await tx.sendAndConfirm(umi);
+        console.log(bs58.encode(result.signature));
     } catch(e) {
         console.error(`Oops, something went wrong: ${e}`)
     }

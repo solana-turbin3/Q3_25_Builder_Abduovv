@@ -1,0 +1,752 @@
+/*
+  Modern Escrow App UI Styles (Mobile Responsive)
+  Improved mobile responsiveness with better breakpoints and layouts
+*/
+
+body, html {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f6f7fb 0%, #e9eaf6 100%);
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.escrow-root {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f6f7fb 0%, #e9eaf6 100%);
+}
+
+/* Header Styles */
+.escrow-header {
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(6px);
+  border-bottom: 1.5px solid #e9d5ff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.escrow-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.escrow-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.escrow-header-logo {
+  padding: 8px;
+  background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.escrow-header-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #312e81;
+  margin-bottom: 2px;
+  line-height: 1.2;
+}
+
+.escrow-header-desc {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.escrow-header-network {
+  color: #6d28d9;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-right: 12px;
+}
+
+/* Main Content */
+.escrow-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* How It Works Section */
+.escrow-how {
+  margin-bottom: 32px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(4px);
+  border: 1.5px solid #e9d5ff;
+  border-radius: 20px;
+  padding: 24px 20px;
+  box-shadow: 0 4px 24px rgba(168, 85, 247, 0.06);
+}
+
+.escrow-how-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.escrow-how-icon {
+  padding: 12px;
+  background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.escrow-how-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.escrow-how-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #312e81;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.escrow-how-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.escrow-how-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.escrow-how-step-num {
+  width: 28px;
+  height: 28px;
+  background: #a78bfa;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.escrow-how-step-num.blue { background: #60a5fa; }
+.escrow-how-step-num.indigo { background: #6366f1; }
+.escrow-how-step-num.green { background: #34d399; }
+
+.escrow-how-step-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.escrow-how-step-title {
+  font-weight: 600;
+  color: #312e81;
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.escrow-how-step-desc {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Card Sections */
+.escrow-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.escrow-card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  border: 1.5px solid #e9d5ff;
+  padding: 24px 20px;
+  box-shadow: 0 4px 24px rgba(168, 85, 247, 0.06);
+}
+
+.escrow-card.taker {
+  border: 1.5px solid #60a5fa;
+}
+
+.escrow-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.escrow-card-header-icon {
+  padding: 12px;
+  background: linear-gradient(90deg, #a78bfa 0%, #f472b6 100%);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.escrow-card-header-icon.taker {
+  background: linear-gradient(90deg, #60a5fa 0%, #6366f1 100%);
+}
+
+.escrow-card-header-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.escrow-card-header-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #312e81;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.escrow-card-header-desc {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+/* Guide Section */
+.escrow-guide {
+  background: #ede9fe;
+  border: 1.5px solid #e9d5ff;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.escrow-guide.taker {
+  background: #dbeafe;
+  border: 1.5px solid #60a5fa;
+}
+
+.escrow-guide-icon {
+  color: #a78bfa;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.escrow-guide-icon.taker { color: #60a5fa; }
+
+.escrow-guide-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.escrow-guide-content-title {
+  font-weight: 600;
+  color: #7c3aed;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.escrow-guide-content-title.taker { color: #2563eb; }
+
+.escrow-guide-list {
+  font-size: 0.9rem;
+  color: #6d28d9;
+  margin: 0;
+  padding-left: 16px;
+  line-height: 1.4;
+}
+
+.escrow-guide-list.taker { color: #2563eb; }
+
+/* Form Styles */
+.escrow-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.escrow-form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.escrow-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.escrow-form-label {
+  font-weight: 600;
+  color: #312e81;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.escrow-form-label-desc {
+  color: #64748b;
+  font-weight: 400;
+  font-size: 0.85rem;
+  margin-left: 4px;
+}
+
+.escrow-form-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #cbd5e1;
+  background: #f7fafc;
+  font-size: 0.95rem;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+
+.escrow-form-input:focus {
+  border: 1.5px solid #a78bfa;
+  outline: none;
+  background: #fff;
+}
+
+.escrow-form-seed-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.escrow-form-seed-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #ede9fe;
+  border: 1.5px solid #e9d5ff;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  color: #a78bfa;
+  cursor: pointer;
+  transition: all 0.18s;
+  white-space: nowrap;
+}
+
+.escrow-form-seed-btn:hover {
+  background: #e0e7ef;
+  border-color: #a78bfa;
+}
+
+.escrow-form-seed-btn-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.escrow-form-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 100%);
+  border-radius: 50%;
+  margin: 8px auto;
+  flex-shrink: 0;
+}
+
+.escrow-form-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-top: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(140, 134, 255, 0.10);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.escrow-form-btn:disabled {
+  background: #e9eaf6;
+  color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.escrow-form-btn:hover:not(:disabled) {
+  background: linear-gradient(90deg, #a78bfa 0%, #6366f1 100%);
+  box-shadow: 0 4px 16px rgba(140, 134, 255, 0.16);
+  transform: translateY(-1px);
+}
+
+.escrow-form-btn-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #fff;
+  border-top: 2px solid #a78bfa;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Status Section */
+.escrow-status {
+  margin-top: 24px;
+}
+
+.escrow-status-inner {
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: 2px solid #e0e7ef;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: #f1f5f9;
+  color: #334155;
+  box-shadow: 0 1px 4px rgba(60, 72, 100, 0.06);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.escrow-status-inner.error {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 2px solid #fecaca;
+}
+
+.escrow-status-inner.success {
+  background: #dcfce7;
+  color: #166534;
+  border: 2px solid #bbf7d0;
+}
+
+.escrow-status-inner.info {
+  background: #dbeafe;
+  color: #2563eb;
+  border: 2px solid #60a5fa;
+}
+
+/* Info Section */
+.escrow-info {
+  margin-top: 24px;
+}
+
+.escrow-info-card {
+  background: linear-gradient(90deg, #f0fdf4 0%, #f0fdfa 100%);
+  border-radius: 20px;
+  border: 2px solid #bbf7d0;
+  padding: 24px 20px;
+  box-shadow: 0 4px 24px rgba(16, 185, 129, 0.06);
+}
+
+.escrow-info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+.escrow-info-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.escrow-info-header-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.escrow-info-header-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #166534;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.escrow-info-header-desc {
+  color: #047857;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.escrow-info-copy-btn {
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  transition: background 0.18s;
+  flex-shrink: 0;
+}
+
+.escrow-info-copy-btn:hover {
+  background: #f1f5f9;
+}
+
+.escrow-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.escrow-info-block {
+  background: rgba(255,255,255,0.7);
+  border-radius: 10px;
+  padding: 14px 12px;
+}
+
+.escrow-info-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.escrow-info-value {
+  font-size: 0.85rem;
+  color: #334155;
+  font-family: 'Menlo', 'Consolas', monospace;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+/* Footer */
+.escrow-footer {
+  margin-top: 48px;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+  padding: 0 16px;
+}
+
+.escrow-footer-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.escrow-footer-dot {
+  width: 4px;
+  height: 4px;
+  background: #a1a1aa;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Responsive Breakpoints */
+
+/* Tablet */
+@media (min-width: 640px) {
+  .escrow-main {
+    padding: 32px 20px;
+  }
+  
+  .escrow-header-inner {
+    padding: 24px 20px;
+  }
+  
+  .escrow-header-title {
+    font-size: 1.4rem;
+  }
+  
+  .escrow-header-desc {
+    font-size: 1rem;
+  }
+  
+  .escrow-form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .escrow-info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .escrow-how-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .escrow-main {
+    padding: 36px 24px;
+  }
+  
+  .escrow-header-inner {
+    padding: 24px 24px 16px 24px;
+  }
+  
+  .escrow-how {
+    padding: 36px 32px;
+  }
+  
+  .escrow-card {
+    padding: 36px 32px;
+  }
+  
+  .escrow-info-card {
+    padding: 36px 32px;
+  }
+  
+  .escrow-form-btn {
+    font-size: 1.1rem;
+    padding: 16px 20px;
+  }
+  
+  .escrow-status-inner {
+    font-size: 1.08rem;
+    padding: 18px 24px;
+  }
+}
+
+/* Mobile specific fixes */
+@media (max-width: 640px) {
+  .escrow-header-inner {
+    padding: 16px 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .escrow-header-left {
+    gap: 8px;
+  }
+  
+  .escrow-header-title {
+    font-size: 1.1rem;
+  }
+  
+  .escrow-header-desc {
+    font-size: 0.85rem;
+  }
+  
+  .escrow-header-network {
+    font-size: 0.85rem;
+    margin-right: 0;
+  }
+  
+  .escrow-main {
+    padding: 16px 12px;
+  }
+  
+  .escrow-how {
+    padding: 20px 16px;
+    margin-bottom: 24px;
+  }
+  
+  .escrow-how-flex {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .escrow-how-title {
+    font-size: 1.2rem;
+  }
+  
+  .escrow-how-steps {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .escrow-sections {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .escrow-card {
+    padding: 20px 16px;
+  }
+  
+  .escrow-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .escrow-card-header-title {
+    font-size: 1.1rem;
+  }
+  
+  .escrow-guide {
+    padding: 14px 12px;
+  }
+  
+  .escrow-form-seed-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .escrow-form-seed-btn {
+    justify-content: center;
+  }
+  
+  .escrow-status-inner {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .escrow-info-card {
+    padding: 20px 16px;
+  }
+  
+  .escrow-info-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .escrow-info-value {
+    font-size: 0.8rem;
+  }
+  
+  .escrow-footer {
+    margin-top: 32px;
+    font-size: 0.85rem;
+  }
+  
+  .escrow-footer-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
